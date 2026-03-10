@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cab-system-sms
+    env: docker
+    region: ohio
+    dockerfilePath: ./CabSystemSMS-main/Dockerfile
+    envVars:
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
